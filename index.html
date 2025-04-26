@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport"
+    content="width=device-width,initial-scale=1.0"/>
+    <title>Elohim Perfum - Inicio</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <script>
+    const botones = document.querySelectorAll("#filtro-categoria button");
+    const perfumes = document.querySelectorAll(".perfume");
+
+    botones.forEach(boton => {
+    boton.addEventListener("click", () => {
+        const categoria = boton.textContent.toLowerCase();
+
+    perfumes.forEach(perfume => {
+        if (categoria === "todos" || perfume.classList.contains(categoria)) {
+            perfume.style.display = "none";
+        } else {
+            perfume.style.display = "none";
+        }
+        });
+
+        // Opcional: marcar botón activo
+        botones.forEach(b => b.classList.remove("activo"));
+        boton.classList.add("activo");
+    });
+    });
+  </script>
+
+  <body>
+    <script src="script.js" defer></script>
+    <header>
+    <h1>Elohim Perfum</h1>
+    <nav>
+      <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="galeria.html">Galería</a></li>
+          <li><a href="detalle.html">Detalle</a></li>
+          <li><a href="nosotros.html">Contactanos</a></li>
+      </ul>
+    </nav>
+    </header>
+    <main>
+      <section id="Destacados">
+        <h2>Perfumes Destacados</h2>
+          <img src="" alt="destacado.perfume1">
+          <h3>Perfume destacado</h3>
+          <p>Descripción del perfume destacado</p>
+      </section><!-- Botones de filtrado -->
+
+      <ul id="myList"></ul>
+      <script>
+          let list = document.getElementById("myList");
+          for (i = 0; i < data.length; ++i) {
+              let li = document.createElement('li');
+              li.innerText = data[i].nombre;
+              if (data[i].categoria == 'mujer') {
+                list.appendChild(li);
+              }
+          }
+      </script>
+
+      <section id="filtro-categoria">
+        <h2>Filtrar por Categorias</h2>
+        <div id="filtro-categoria">
+          <button>Todos</button>
+          <button>Mujer</button>
+          <button>Hombre</button>
+          <button>Unisex</button>
+        </div>
+  
+        <!-- Productos -->
+        <div class="Productos">
+          <article class="perfumes mujer">
+            <img src="" alt="m.perfume1">
+            <h3>Perfume Mujer1</h3>
+            <p>Descripción del perfume de mujer 1</p>
+
+            <img src="" alt="m.perfume2">
+            <h3>Perfume Mujer2</h3>
+            <p>Descripción del perfume de mujer 2</p>
+
+            <img src="" alt="m.perfume3">
+            <h3>Perfume Mujer3</h3>
+            <p>Descripción del perfume de mujer 3</p>
+          </article>
+  
+          <article class="perfumes hombre">
+            <img src="" alt="h.perfume1">
+            <h3>Perfume Hombre1</h3>
+            <p>Descripción del perfume de hombre</p>
+
+            <img src="" alt="h.perfume2">
+            <h3>Perfume Hombre2</h3>
+            <p>Descripción del perfume de hombre2</p>
+
+            <img src="" alt="h.perfume3">
+            <h3>Perfume Hombre3</h3>
+            <p>Descripción del perfume de hombre2</p>
+          </article>
+  
+          <article class="perfumes unisex">
+            <img src="" alt="u.perfume1">
+            <h3>Perfume Unisex1</h3>
+            <p>Descripción del perfume unisex1</p>
+
+            <img src="" alt="u.perfume2">
+            <h3>Perfume Unisex2</h3>
+            <p>Descripción del perfume unisex2</p>
+
+            <img src="" alt="u.perfume3">
+            <h3>Perfume Unisex3</h3>
+            <p>Descripción del perfume unisex3</p>
+          </article>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2025 Elohim Perfum. Todos los derechos reservados.</p>
+    </footer>
+  </body> 
+</html>   
