@@ -2,49 +2,27 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport"
-    content="width=device-width,initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
     <title>Elohim Perfum - Inicio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">  
     <link rel="stylesheet" href="style.css">
   </head>
 
-  <script>
-    const botones = document.querySelectorAll("#filtro-categoria button");
-    const perfumes = document.querySelectorAll(".perfume");
-
-    botones.forEach(boton => {
-    boton.addEventListener("click", () => {
-        const categoria = boton.textContent.toLowerCase();
-
-    perfumes.forEach(perfume => {
-        if (categoria === "todos" || perfume.classList.contains(categoria)) {
-            perfume.style.display = "none";
-        } else {
-            perfume.style.display = "none";
-        }
-        });
-
-        // Opcional: marcar botón activo
-        botones.forEach(b => b.classList.remove("activo"));
-        boton.classList.add("activo");
-    });
-    });
-  </script>
-
   <body>
     <script src="script.js" defer></script>
+
     <header>
-    <h1>Elohim Perfum</h1>
+    <h1>ELOHIM PERFUM<img src="img/elohimlogo-Photoroom.png" alt="logo" style="height: 95px; vertical-align: middle;"></h1>
     <nav>
       <ul>
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="galeria.html">Galería</a></li>
-          <li><a href="detalle.html">Detalle</a></li>
+          <li><a href="index.html" class="activo">Inicio</a></li>
+          <li><a href="catalogo.html">Catalogo</a></li>
           <li><a href="nosotros.html">Contactanos</a></li>
       </ul>
     </nav>
     </header>
     
+    <main class="main-index">
       <section class="destacados">
         <div class="card">
           <div class="card-inner">
@@ -66,9 +44,11 @@
       
         <!-- Más tarjetas si quieres -->
       </section>
-  
+    </main>
+
     <footer>
       <p>&copy; 2025 Elohim Perfum. Todos los derechos reservados.</p>
     </footer>
+
   </body> 
 </html>   
